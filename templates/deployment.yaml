@@ -63,7 +63,7 @@ spec:
           claimName: "{{ .Chart.Name }}-wine"
       - name: config
         configMap:
-          name: sotf-config map
+          name: "{{ .Chart.Name }}-map }}"
           items:
             - key: game_config
               path: /sonsoftheforest/userdata/dedicatedserver.cfg
