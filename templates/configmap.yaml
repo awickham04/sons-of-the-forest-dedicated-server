@@ -9,4 +9,4 @@ chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
 app: "{{ .Chart.Name }}"
  
 data:
-game_config: {{ {{ .Files.Get .Values.config.configPath | indent 4 }}
+game_config: {{ .Files.Get .Values.config.configPath | indent 4 }}
