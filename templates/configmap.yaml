@@ -7,7 +7,7 @@ data:
       "QueryPort": 27016,
       "BlobSyncPort": 9700,
       "ServerName": "There's a snake in my boot",
-      "MaxPlayers": 16,
+      "MaxPlayers": 8,
       "Password": "changemenow",
       "SaveSlot": 1,
       "SaveMode": "Continue",
