@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "{{ .Chart.Name }}-service"
+  labels:
+    app: "{{ .Chart.Name }}"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- with .Values.service.annotations }}
+  annotations: {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - name: game-port
+    port: {{ .Values.config.gamePort | int }}
+    protocol: UDP
+    targetPort: {{ .Values.config.gamePort | int }}
+  - name: query-port
+    port: {{ .Values.config.queryPort | int  }}
+    protocol: UDP
+    targetPort: {{ .Values.config.queryPort | int  }}
+  - name: blobsync-port
+    port: {{ .Values.config.blobSyncPort | int }}
+    protocol: UDP
+    targetPort: {{ .Values.config.blobSyncPort | int }}
+  selector:
+    app: "{{ .Chart.Name }}"
+

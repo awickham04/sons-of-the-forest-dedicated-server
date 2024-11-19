@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+name: sotf-config map
+labels:
+heritage: "{{ .Release.Service | quote }}"
+release: "{{ .Release.Name | quote }}"
+chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+app: "{{ .Chart.Name }}"
+ 
+data:
+game_config: {{ {{ .Files.Get .Values.config.configPath | indent 4 }}

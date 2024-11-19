@@ -1,0 +1,28 @@
+image:
+  repository: jammsen/sons-of-the-forest-dedicated-server
+  tag: latest
+
+service:
+  type: ClusterIP
+
+resources:
+  requests:
+    memory: 16G
+    cpu: 6.0
+
+volumes:
+  gamePVC:
+    size: 50Gi
+  steamcmdPVC:
+    size: 50Gi
+  winePVC:
+    size: 50Gi
+  storageClassName: "longhorn"
+
+config:
+  hostIP: "0.0.0.0"
+  gamePort: "8766"
+  queryPort: "27016"
+  blobSyncPort: "9700"
+  alwaysUpdateOnStart: "1"
+  configPath: "dedicatedserver.cfg"
