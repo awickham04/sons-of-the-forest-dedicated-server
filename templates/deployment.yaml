@@ -65,7 +65,7 @@ spec:
         configMap:
           name: "{{ .Chart.Name }}-map }}"
           items:
-            - key: game_config
+            - key: dedicatedserver.cfg
               path: /sonsoftheforest/userdata/dedicatedserver.cfg
       terminationGracePeriodSeconds: 90
 
