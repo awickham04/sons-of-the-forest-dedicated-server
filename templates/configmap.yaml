@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: "{{ .Chart.Name }}-map "
+  name: "{{ .Chart.Name }}-map"
   labels:
     app: "{{ .Chart.Name }}"
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
@@ -9,4 +9,4 @@ metadata:
     heritage: "{{ .Release.Service }}"
  
 data:
-game_config: {{ .Files.Get .Values.config.configPath | indent 4 }}
+  game_config: {{ .Files.Get .Values.config.configPath | indent 4 }}
