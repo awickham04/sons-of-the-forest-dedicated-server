@@ -70,7 +70,7 @@ spec:
           claimName: "{{ .Chart.Name }}-wine"
       - name: config
         configMap:
-          name: "{{ .Chart.Name }}-map }}"
+          name: "{{ .Chart.Name }}-map"
           items:
             - key: dedicatedserver.cfg
               path: sonsoftheforest/userdata/dedicatedserver.cfg
