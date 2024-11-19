@@ -73,6 +73,6 @@ spec:
           name: "{{ .Chart.Name }}-map"
           items:
             - key: dedicatedserver.cfg
-              path: sonsoftheforest/userdata/dedicatedserver.cfg
+              path: dedicatedserver.cfg
       terminationGracePeriodSeconds: 90
 
