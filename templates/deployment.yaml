@@ -33,14 +33,18 @@ spec:
         ports:
         - name: game-port
           containerPort: {{ .Values.config.gamePort | int }}
-          hostIP: {{ .Values.config.hostIP | int  }}
+          hostIP: {{ .Values.config.hostIP }}
           hostPort: {{ .Values.config.gamePort | int }}
           protocol: UDP
         - name: query-port
           containerPort: {{ .Values.config.queryPort | int }}
+          hostIP: {{ .Values.config.hostIP }}
+          hostPort: {{ .Values.config.queryPort | int }}
           protocol: UDP
         - name: blobsync-port
           containerPort: {{ .Values.config.blobSyncPort | int }}
+          hostIP: {{ .Values.config.hostIP }}
+          hostPort: {{ .Values.config.blobSyncPort | int }}
           protocol: UDP
         volumeMounts:
         - name: game
