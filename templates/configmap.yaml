@@ -16,15 +16,15 @@ data:
       "IdleDayCycleSpeed": {{ .Values.serverConfig.idleDayCycleSpeed | float64 }},
       "IdleTargetFramerate": {{ .Values.serverConfig.idleTargetFramerate | int }},
       "ActiveTargetFramerate": {{ .Values.serverConfig.activeTargetFramerate |int }},
-      "LogFilesEnabled": {{ .Values.serverConfig.logFilesEnabled | bool }},
-      "TimestampLogFilenames": {{ .Values.serverConfig.timestampLogFilenames | bool }},
-      "TimestampLogEntries": {{ .Values.serverConfig.timestampLogEntries | bool }},
+      "LogFilesEnabled": {{ .Values.serverConfig.logFilesEnabled }},
+      "TimestampLogFilenames": {{ .Values.serverConfig.timestampLogFilenames }},
+      "TimestampLogEntries": {{ .Values.serverConfig.timestampLogEntries }},
       "GameSettings": {
-        "Gameplay.TreeRegrowth": {{ .Values.serverConfig.gameplayTreeRegrowth | bool }},
-        "Structure.Damage": {{ .Values.serverConfig.structureDamage | bool }}
+        "Gameplay.TreeRegrowth": {{ .Values.serverConfig.gameplayTreeRegrowth }},
+        "Structure.Damage": {{ .Values.serverConfig.structureDamage }}
       },
       "CustomGameModeSettings": {
-        "GameSetting.Vail.EnemySpawn": {{ .Values.serverConfig.enemySpawn | bool }},
+        "GameSetting.Vail.EnemySpawn": {{ .Values.serverConfig.enemySpawn }},
         "GameSetting.Vail.EnemyHealth": {{ .Values.serverConfig.enemyHealth | quote }},
         "GameSetting.Vail.EnemyDamage": {{ .Values.serverConfig.enemyDamage | quote }},
         "GameSetting.Vail.EnemyArmour": {{ .Values.serverConfig.enemyArmour | quote }},
@@ -37,11 +37,11 @@ data:
         "GameSetting.Survival.ConsumableEffects": {{ .Values.serverConfig.survivalConsumableEffects | quote }},
         "GameSetting.Survival.PlayerStatsDamage": {{ .Values.serverConfig.survivalPlayerStatsDamage | quote }},
         "GameSetting.Survival.ColdPenalties": {{ .Values.serverConfig.survivalColPenalties | quote }},
-        "GameSetting.Survival.ReducedFoodInContainers": {{ .Values.serverConfig.survivalReducedFoodInContainers | bool }},
-        "GameSetting.Survival.SingleUseContainers": {{ .Values.serverConfig.survivalSingleUseContainers | bool }}
+        "GameSetting.Survival.ReducedFoodInContainers": {{ .Values.serverConfig.survivalReducedFoodInContainers }},
+        "GameSetting.Survival.SingleUseContainers": {{ .Values.serverConfig.survivalSingleUseContainers }}
       },
-      "LanOnly": {{ .Values.serverConfig.lanOnly | bool }},
-      "SkipNetworkAccessibilityTest": {{ .Values.serverConfig.skipNetworkAccessibilityTest | bool }}
+      "LanOnly": {{ .Values.serverConfig.lanOnly }},
+      "SkipNetworkAccessibilityTest": {{ .Values.serverConfig.skipNetworkAccessibilityTest }}
     }
 
 kind: ConfigMap
