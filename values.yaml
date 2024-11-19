@@ -25,4 +25,4 @@ config:
   queryPort: "27016"
   blobSyncPort: "9700"
   alwaysUpdateOnStart: "1"
-  hostNetwork: false
+  hostNetwork: "false"
