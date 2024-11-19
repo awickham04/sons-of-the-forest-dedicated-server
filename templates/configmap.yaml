@@ -3,10 +3,10 @@ kind: ConfigMap
 metadata:
 name: sotf-config map
 labels:
-heritage: "{{ .Release.Service | quote }}"
-release: "{{ .Release.Name | quote }}"
-chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-app: "{{ .Chart.Name }}"
+    app: "{{ .Chart.Name }}"
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
  
 data:
 game_config: {{ .Files.Get .Values.config.configPath | indent 4 }}
