@@ -53,6 +53,9 @@ spec:
           mountPath: /steamcmd
         - name: wine
           mountPath: /winedata
+        - name: config
+          mountpath: sonsoftheforest/userdata/dedicatedserver.cfg
+          subPath: dedicatedserver.cfg
         securityContext:
           allowPrivilegeEscalation: false
       volumes:
